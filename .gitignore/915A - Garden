@@ -1,0 +1,34 @@
+#include<iostream>
+#include <algorithm>
+
+using namespace std;
+
+
+int main()
+{
+	int n;
+	int k;
+	int  hours[101] = {0};
+
+	cin >> n >> k;
+	int buckets[101] = {0};
+	for (int i = 0; i < n; i++)
+	{
+		cin >> buckets[i];
+	}
+	int counter = 0;
+	
+	for (int i = 0; i < n; i++)
+	{
+		if (k%buckets[i] == 0)
+		{
+			hours[counter] = k / buckets[i];
+			counter++;
+		}
+		else continue;
+
+	}
+	sort(hours, hours+counter);
+	cout << hours[0] << endl;
+
+}
