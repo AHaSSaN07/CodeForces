@@ -1,0 +1,26 @@
+#include<iostream>
+#include <algorithm>
+
+using namespace std;
+
+bool desc(int i, int j) { return i > j; }
+
+
+int main()
+{
+	string s;
+	cin >> s;
+	string scan = "aeiou13579";
+	int counter = 0;
+
+	for (int i = 0 ;i< s.size();i++)
+	{
+		for (int j = 0; j < scan.size(); j++)
+		{
+			if (s[i] == scan[j])
+				counter++;
+		}
+	}
+
+	cout << counter << endl;
+}
