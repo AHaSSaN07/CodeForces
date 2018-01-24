@@ -1,0 +1,32 @@
+#include<iostream>
+#include <algorithm>
+
+using namespace std;
+int main()
+{
+	long long  A, B;
+	cin >> A >> B;
+	long long  x, y, z;
+	cin >> x >> y >> z;
+	long long out1, out2;
+	if ((3 * z + y) - B > 0 )
+	{
+	out2 = (3 * z + y) - B;
+
+	 }
+	else
+	{
+		out2 = 0;
+	}
+	if ((2 * x + y) - A > 0)
+	{
+		out1 = (2 * x + y) - A;
+	}
+	else
+	{
+		out1 = 0;
+	}
+
+	
+	cout << out1 + out2 << endl;
+}
