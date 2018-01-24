@@ -1,0 +1,23 @@
+#include<iostream>
+#include <stdlib.h>
+#include <algorithm>
+
+using namespace std;
+
+
+int main()
+{
+	int n, a, b;
+	cin >> n >> a >> b;
+	if ((abs((b%n) + a + n) % n )> 0)
+	{
+		cout << abs((b%n) + a + n) % n << endl;
+
+	}
+	else
+	{
+		cout << n << endl;
+
+	}
+
+}
