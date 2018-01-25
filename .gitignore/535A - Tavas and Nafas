@@ -1,0 +1,31 @@
+#include<iostream>
+#include<stdio.h>
+#include <stdlib.h>
+#include <algorithm>
+#include <string>
+#include<stack>
+
+using namespace std;
+
+int main()
+{
+	int input;
+	cin >> input;
+	string numbers[] = { "zero","one","two","three","four","five","six","seven","eight","nine","ten",
+		"eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty",
+		"thirty","forty","fifty","sixty","seventy","eighty","ninety" };
+	if (input >= 0 && input < 20)
+	{
+		cout << numbers[input] << endl;;
+	}
+	else
+	{
+		cout << numbers[input / 10 + 18];
+		if (input % 10)
+		{
+			cout << "-" << numbers[input % 10] << endl;
+
+		}
+	}
+	return 0;
+}
