@@ -1,0 +1,31 @@
+#include<iostream>
+#include<stdio.h>
+#include <stdlib.h>
+#include <algorithm>
+#include <string>
+#include<stack>
+
+using namespace std;
+
+bool iseven(int number)
+{
+	if (number % 2 == 0)return true;
+	else
+	{
+		return false;
+	}
+}
+
+int main()
+{
+	int input;
+	cin >> input;
+
+	if (iseven(input % 2)&&input>2)
+		cout << "yes\n";
+	else
+	{
+		cout << "NO\n";
+	}
+	return 0 ;
+}
