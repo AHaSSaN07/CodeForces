@@ -1,0 +1,22 @@
+#include<iostream>
+#include<stdio.h>
+#include <stdlib.h>
+#include <algorithm>
+#include <string>
+#include<stack>
+
+using namespace std;
+
+int main()
+{
+	int x;
+	cin >> x;
+	int counter = 0;
+	while (x)
+	{
+		int n = x & 1;
+		counter += n;
+		x >>= 1;
+	}
+	cout << counter << endl;
+}
