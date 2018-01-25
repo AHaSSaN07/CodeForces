@@ -1,0 +1,42 @@
+#include<iostream>
+#include<stdio.h>
+#include <stdlib.h>
+#include <algorithm>
+#include <string>
+#include<stack>
+
+using namespace std;
+
+int main()
+{
+	string input;
+	cin.ignore();
+	getline(cin, input);
+	char sequence[1000] = {'0'};
+	int itr = 0;
+	for(int i =0 ; i<input.length();i++)
+	{
+		if (input[i] == ' ' || input[i] == ',' || input[i] == '}'||input[i] == '{')continue;
+		else
+		{
+			sequence[itr] = input[i];
+			itr++;
+		}
+	}
+	int count =0;
+	//cout << sequence << endl;
+	for (int i = 0; i < itr; i++) {
+		bool appears = false;
+		for (int j = 0; j < i; j++) {
+			if (sequence[j] == sequence[i]) {
+				appears = true;
+				break;
+			}
+		}
+
+		if (!appears) {
+			count++;
+		}
+	}
+	cout << count << endl;
+}
