@@ -1,0 +1,32 @@
+#include<iostream>
+#include<algorithm>
+#include <string>
+using namespace std;
+bool desc(int i, int j) {
+	return i > j;
+}
+
+int main()
+{
+	int n, m;
+	cin >> n >> m;
+	int l, r;
+	char c1, c2;
+	string input;
+	string out;
+	cin >> input;
+	for (int i = 0; i < m; i++)
+	{
+		
+		cin >> l >> r >> c1 >> c2;
+		for (int j = 0; j < input.length() ; j++)
+		{
+			if (input[j] == c1 && j>=l-1 &&j<=r-1 )
+			{
+				input[j] = c2;
+			}
+		}
+		//cout << input;
+	}
+	cout << input;
+}
