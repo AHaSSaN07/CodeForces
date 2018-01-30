@@ -1,0 +1,30 @@
+#include<iostream>
+#include<stdio.h>
+#include <stdlib.h>
+#include <algorithm>
+#include <string>
+#include<stack>
+
+using namespace std;
+
+
+bool desc(int i, int j) { return (i>j); }
+
+int main()
+{
+	//string odds[4] = {"1/6","1/2",""}; 
+	int yw[2];
+	cin >> yw[0]>>yw[1];
+	sort(yw, yw + 2, desc);
+	//cout << yw[0];
+	int roll =( 6 - yw[0]) + 1;
+	//cout << roll;
+	if (roll == 0)cout << "0/1\n";
+	if (roll == 1)cout << "1/6\n";
+	if (roll == 2)cout << "1/3\n";
+	if (roll == 3)cout << "1/2\n";
+	if (roll == 4)cout << "2/3\n";
+	if (roll == 5)cout << "5/6\n";
+	if (roll == 6)cout << "1/1\n";
+
+}
