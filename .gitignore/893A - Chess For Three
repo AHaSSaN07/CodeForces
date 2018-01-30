@@ -1,0 +1,29 @@
+include<iostream>
+
+using namespace std;
+
+
+
+	
+int main()
+{
+	int n;
+	cin >> n;
+
+	int p1 = 1;
+	int p2 = 2;
+	int s = 3;
+	int won;
+	for (int i = 0; i < n ; i++)
+	{
+		cin >> won;
+		if (won == s)
+		{
+			cout << "NO\n";
+			return 0;
+		}
+		if (won == p1)swap(p2, s);
+		else swap(p1, s);
+	}
+	cout << "YES\n";
+}
