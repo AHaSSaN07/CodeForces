@@ -1,0 +1,45 @@
+#include<iostream>
+#include<algorithm>
+#include <string>
+#include <bitset>
+#include<stdio.h>
+#include<stdlib.h>
+#include <cstdio>
+#include <vector>
+
+
+using namespace std;
+
+int main()
+{
+	int n, m;
+	cin >> n >> m;
+	string server_name[1000];
+	string server_ip[1000];
+	string command_name[1000];
+	string ip[1000];
+
+	for (int i = 0; i < n; i++)
+	{
+		cin >> server_name[i];
+		cin >> server_ip[i];
+		server_ip[i] =server_ip[i] + ";";
+	}
+	for (int i = 0; i < m; i++)
+	{
+		cin >> command_name[i];
+		cin >> ip[i];
+	}
+
+	for (int i = 0; i < m; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (ip[i] == server_ip[j])
+			{
+				cout << command_name[i] << " " << server_ip[j] << " #" << server_name[j]<<endl;
+			}
+		}
+	}
+	return 0;
+}
