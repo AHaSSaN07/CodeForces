@@ -1,0 +1,36 @@
+#include<iostream>
+#include<algorithm>
+#include <string>
+using namespace std;
+bool desc(int i, int j) {
+	return i > j;
+}
+
+int main()
+{
+	int n, hh, mm, count = 0;
+	cin >> n >> hh >> mm;
+	if (mm % 10 == 7 || hh % 10 == 7 || mm / 10 == 7 || hh / 10 == 7)
+	{
+		cout << 0;
+		return 0;
+	}
+	while (!(mm % 10 == 7 || hh % 10 == 7 || mm / 10 == 7 || hh / 10 == 7))
+	{
+		mm -= n;
+		count++;
+
+		if (mm < 0)
+		{
+			hh--;
+			mm = 60 - (0 - mm);
+		}
+		if (hh <= 0)
+		{
+			hh = 24 - (0 - hh);
+		}
+
+	}
+	cout << count << endl;
+
+}
