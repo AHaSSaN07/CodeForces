@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+string reverse_str(string str)
+{
+	int n = str.length();
+	for (int i = 0; i<n / 2; i++)swap(str[i], str[n - i - 1]);
+	return str;
+}
+
+int main()
+{
+	string input1;
+	string input2;
+	cin >> input1;
+	cin >> input2;
+	string temp;
+    temp = reverse_str(input1);
+	if (input2 == temp)cout << "YES\n";
+	else cout << "NO\n";
+	
+}
