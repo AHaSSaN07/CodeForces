@@ -1,0 +1,52 @@
+#include<iostream>
+#include<algorithm>
+#include <string>
+#include <bitset>
+#include<stdio.h>
+#include<stdlib.h>
+#include <cstdio>
+#include <vector>
+#include <set>
+
+bool desc(int i, int j) { return i > j; }
+using namespace std;
+
+int sumnum(int num)
+{
+	int digit;
+	int sum = 0;
+	int temp;
+	temp = num;
+	while (num > 0)
+	{
+		digit = num % 10;
+		sum = sum + digit;
+		num /= 10;
+	}
+	return sum;
+}
+
+int main()
+{
+	//set<int> = {}
+	int k;
+	cin >> k;
+	int itr = 0;
+	bool found = false;
+	int i = 0;
+	while (found!=true)
+	{
+		//if (itr == k;)
+		if (sumnum(i) == 10)
+		{
+			itr++;
+		}
+		if (itr == k &&sumnum(i) == 10)
+		{
+			cout << i << endl;
+			found = true;
+		}
+		i++;
+	}
+	return 0;
+}
