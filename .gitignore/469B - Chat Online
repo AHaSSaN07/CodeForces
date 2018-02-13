@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+//pair<int, int> ab[100];
+//pair<int, int> cd[100
+
+int main() {
+	int p, q, l, r;
+	int counter = 0;
+	cin >> p >> q >> l >> r;
+	int periodz[20001] = {0};
+	int periodx[10001] = {0};
+	for (int i = 0; i < p; i++) 
+	{
+		int x, y;
+		cin >> x >> y;
+		for (int j = x; j <= y; j++)periodz[j]++;
+	}
+	for (int i = 0; i < q; i++)
+	{
+		int x, y;
+		cin >> x >> y;
+		for (int j = x; j <= y; j++)periodx[j]++;
+	}
+	for (int i = l; i <= r; i++) 
+	{
+		for (int j = 0; j < 10001; j++)
+		{
+			if (periodx[j] && periodz[i + j]) 
+			{
+			
+				counter++;
+				break;
+			}
+		}
+	}
+	cout << counter << endl;
+}
