@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n,a,b;
+	cin >> n;
+	int rankneeds[101];
+	rankneeds[0] = 0;
+	rankneeds[1] = 0;
+	for (int i = 2; i < n +1; i++)cin >> rankneeds[i];
+	cin >> a >> b;
+	int sum =0;
+	int B = b - a;
+	while (B!=0)
+	{
+		sum += rankneeds[b];
+		b--;
+		B--;
+	}
+	cout << sum << endl;
+
+}
