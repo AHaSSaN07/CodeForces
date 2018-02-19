@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n, f = 0, officers = 0, gotaway = 0;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> f;
+		if (f != -1)officers+=f;
+		if (f == -1)
+		{
+			if (officers > 0)officers--;
+			else gotaway++;
+		}
+	}
+	cout << gotaway << endl;
+}
