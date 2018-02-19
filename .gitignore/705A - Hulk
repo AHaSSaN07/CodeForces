@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+bool desc(int i, int j) { return i > j; }
+
+int main()
+{
+	int n;
+	cin >> n;
+	string feeling;
+	for (int i = 1; i <= n; i++)
+	{
+		if (i == 1)
+		{
+			feeling += "I hate ";
+			continue;
+		}
+		if (i % 2 != 0)
+		{
+			feeling += "that I hate ";
+		}
+		if (i % 2 == 0)
+		{
+			feeling += "that I love ";
+		}
+
+	}
+	feeling += "it";
+	cout << feeling << endl;
+}
