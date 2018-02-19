@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+	using namespace std;
+
+	bool desc(int i, int j) { return i > j; }
+	bool iseven(int i) { return i % 2 == 0; }
+	bool isodd(int i) { return i % 2 != 0; }
+
+	int main()
+	{
+		vector<int> input;
+		long long int n;
+		cin >> n;
+		long long  temp;
+		long long int odd = 0;
+		for (int i = 0; i < n; i++)
+		{
+			cin >> temp;
+			input.push_back(temp);
+			if (isodd(temp))odd++;
+		}
+		if (!odd)
+		{
+			cout << "Second\n";
+		}
+		else
+		{
+			cout << "First\n";
+		}
+	}
