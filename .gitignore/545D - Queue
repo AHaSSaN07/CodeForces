@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+int main()
+{
+	long int n;
+	scanf("%d", &n);
+	long int input[100002];
+	long int counter = 0;
+	long int wating_time = 0;
+	for (long int i = 0; i < n; i++)
+	{
+		scanf("%d", &input[i]);
+	}
+	sort(input, input + n);
+	for (long int i = 0; i < n; i++)
+	{
+		if (input[i] >= wating_time)counter++, wating_time += input[i];
+	}
+	cout << counter << endl;
+}
