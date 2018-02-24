@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n;
+	scanf("%d", &n);
+	string input[100];
+	int counter[100] = { 0 };
+	set<string> teams;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> input[i];
+		teams.insert(input[i]);
+	}
+	std::set<string>::iterator it;
+	int k = 0;
+	for (it = teams.begin(); it != teams.end();it++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (input[j] == *it)counter[k]++;
+		}
+		k++;
+	}
+	std::set<string>::iterator it2 = teams.begin();
+	int out = max_element(counter, counter + k) - counter;
+	for (int i = 0; i < out; i++)it2++;
+	cout << *it2 << endl;
+}
