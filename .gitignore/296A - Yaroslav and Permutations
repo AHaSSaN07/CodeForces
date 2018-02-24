@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int n;
+	scanf("%d", &n);
+	int input[101];
+	int counter[101] = { 0 };
+	set<int> numbers;
+	for (int i = 0; i < n; i++)
+	{
+		scanf("%d", &input[i]);
+		numbers.insert(input[i]);
+	}
+	std::set<int>::iterator it;
+	int k = 0;
+	for (it = numbers.begin(); it != numbers.end();it++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (input[j] == *it)counter[k]++;
+		}
+		k++;
+	}
+	int odd = 0;
+	int even = 0;
+	for (int i = 0; i < k; i++)
+	{
+		if (counter[i] > (n + 1) / 2) { cout << "NO\n"; return 0; }
+		
+	}
+	cout << "YES\n";
+	return 0;
+}
